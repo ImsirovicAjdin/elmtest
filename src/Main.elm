@@ -19,4 +19,6 @@ init =
         ++ answer
 
 main =
-    view init -- (2)
+    init
+        |> String.toUpper
+        |> view
