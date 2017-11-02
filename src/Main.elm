@@ -8,5 +8,11 @@ question =
 view model =
     text model
 
+-- (1)
+init = 
+    "Question: " 
+        ++ question 
+        ++ "Answer: To get to the other side"
+
 main =
-    view question
+    view init -- (2)
