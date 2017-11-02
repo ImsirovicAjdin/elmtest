@@ -2,6 +2,9 @@ module Main exposing (..)
 
 import Html exposing (text)
 
+answer =
+    "To get to the other side!"
+
 question = 
     "Why did the C x the R?"
 
@@ -12,7 +15,8 @@ view model =
 init = 
     "Question: " 
         ++ question 
-        ++ " Answer: To get to the other side"
+        ++ " Answer: "
+        ++ answer
 
 main =
     view init -- (2)
