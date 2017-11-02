@@ -11,14 +11,17 @@ question =
 view model =
     text model
 
--- (1)
+
 init = 
     "Question: " 
         ++ question 
         ++ " Answer: "
         ++ answer
 
+toUpperLambda =
+    (\str -> String.toUpper str) -- (1)
+
 main =
     init
-        |> String.toUpper
+        |> toUpperLambda -- (2)
         |> view
