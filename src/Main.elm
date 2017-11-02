@@ -18,15 +18,5 @@ init =
         ++ " Answer: "
         ++ answer
 
--- (1)
-sum a b =
-    a + b
--- (2)
-sumWithOne =
-    sum 1
-
-toUpperLambda =
-    (\str -> String.toUpper str)
-
 main =
-    text (toString (sumWithOne 2))
+    view init
