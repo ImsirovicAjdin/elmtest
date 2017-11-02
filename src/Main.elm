@@ -12,7 +12,7 @@ view model =
 init = 
     "Question: " 
         ++ question 
-        ++ "Answer: To get to the other side"
+        ++ " Answer: To get to the other side"
 
 main =
     view init -- (2)
