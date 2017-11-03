@@ -3,7 +3,11 @@ module Main exposing (..)
 import Html exposing (text)
 
 list =
-    1 :: [ 2, 3 ] ++ [ 4, 5 ]
+    1 :: [ 2 ] ++ [ 3 ]
+
+transformList list =
+    list
+        |> List.map (\a -> a + 1)
 
 view model =
     text 
