@@ -11,9 +11,10 @@ question =
 view model =
     text 
         ("Question: "
-            ++ question
+            ++ (Tuple.first model)
             ++ " Answer: "
-            ++ answer)
+            ++ (Tuple.second model)
+        )
 
 
 init = 
