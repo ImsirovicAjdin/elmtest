@@ -13,10 +13,7 @@ view model =
 
 
 init = 
-    "Question: " 
-        ++ question 
-        ++ " Answer: "
-        ++ answer
+    ( question, answer )
 
 main =
     view init
