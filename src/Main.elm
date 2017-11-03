@@ -18,4 +18,4 @@ init =
     }
 
 main =
-    view init
+    text (toString init)
