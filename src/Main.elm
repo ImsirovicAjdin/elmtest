@@ -3,12 +3,12 @@ module Main exposing (..)
 import Html exposing (text)
 
 
-view { question, answer } =
+view model =
     text 
         ("Question: "
-            ++ question
+            ++ (.question model)
             ++ " Answer: "
-            ++ answer
+            ++ (.answer model)
         )
 
 
