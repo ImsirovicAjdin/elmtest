@@ -8,6 +8,8 @@ list =
 transformList list =
     list
         |> List.map (\a -> a + 1)
+        |> List.map toString -- (1)
+        |> String.join ", "
 
 view model =
     text 
@@ -27,5 +29,5 @@ main =
     -- view init
     list 
         |> transformList
-        |> toString
+        -- |> toString (3)
         |> text
