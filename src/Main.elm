@@ -8,17 +8,19 @@ answer =
 question = 
     "Why did the C x the R?"
 
-view model =
+view ( question, answer ) =
     text 
         ("Question: "
-            ++ (Tuple.first model)
+            ++ question
             ++ " Answer: "
-            ++ (Tuple.second model)
+            ++ answer
         )
 
 
 init = 
-    ( question, answer )
+    ( "Why did the chicken cross the road?"
+    , "To get to the other side"
+    )
 
 main =
     view init
