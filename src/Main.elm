@@ -31,6 +31,6 @@ init =
 
 main =
     -- view init
-    list 
-        |> transformList
+    set 
+        |> toString
         |> text
