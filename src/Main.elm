@@ -6,9 +6,9 @@ import Html exposing (text)
 view model =
     text 
         ("Question: "
-            ++ (.question model)
+            ++ (model.question)
             ++ " Answer: "
-            ++ (.answer model) -- (1)
+            ++ (model.answer)
         )
 
 
