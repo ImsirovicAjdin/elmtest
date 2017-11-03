@@ -6,7 +6,7 @@ import Html exposing (text)
 view model =
     text 
         ("Question: "
-            ++ (model.question)
+            ++ (model[ question ])
             ++ " Answer: "
             ++ (model.answer)
         )
