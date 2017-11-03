@@ -3,7 +3,7 @@ module Main exposing (..)
 import Html exposing (text)
 
 list =
-    []
+    1 :: []
 
 view model =
     text 
