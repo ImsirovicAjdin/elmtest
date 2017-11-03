@@ -8,7 +8,7 @@ view model =
         ("Question: "
             ++ (.question model)
             ++ " Answer: "
-            ++ (.answer model)
+            ++ (.answer model) -- (1)
         )
 
 
