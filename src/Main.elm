@@ -9,7 +9,11 @@ question =
     "Why did the C x the R?"
 
 view model =
-    text model
+    text 
+        ("Question: "
+            ++ question
+            ++ " Answer: "
+            ++ answer)
 
 
 init = 
