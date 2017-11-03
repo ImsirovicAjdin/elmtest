@@ -2,11 +2,13 @@ module Main exposing (..)
 
 import Html exposing (text)
 
+list =
+    []
 
 view model =
     text 
         ("Question: "
-            ++ (model[ question ])
+            ++ (model.question)
             ++ " Answer: "
             ++ (model.answer)
         )
@@ -18,4 +20,7 @@ init =
     }
 
 main =
-    view init
+    -- view init
+    list 
+        |> toString
+        |> text
