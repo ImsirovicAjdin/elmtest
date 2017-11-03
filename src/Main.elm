@@ -1,6 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (text)
+import Set
 
 list =
     1 :: [ 2 ] ++ [ 3 ]
@@ -8,8 +9,11 @@ list =
 transformList list =
     list
         |> List.map (\a -> a + 1)
-        |> List.map toString -- (1)
+        |> List.map toString
         |> String.join ", "
+
+set =
+    Set.fromList list
 
 view model =
     text 
@@ -29,5 +33,4 @@ main =
     -- view init
     list 
         |> transformList
-        -- |> toString (3)
         |> text
