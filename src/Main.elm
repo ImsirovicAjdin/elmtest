@@ -3,7 +3,7 @@ module Main exposing (..)
 import Html exposing (text)
 
 
-view ( question, answer ) =
+view { question, answer } =
     text 
         ("Question: "
             ++ question
@@ -18,4 +18,4 @@ init =
     }
 
 main =
-    text (toString init)
+    view init
