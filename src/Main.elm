@@ -15,6 +15,10 @@ transformList list =
 set =
     Set.fromList list
 
+transformSet set =
+    set 
+        |> toString
+
 view model =
     text 
         ("Question: "
@@ -32,5 +36,5 @@ init =
 main =
     -- view init
     set 
-        |> toString
+        |> transformSet
         |> text
