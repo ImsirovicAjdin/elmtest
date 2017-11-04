@@ -28,10 +28,10 @@ view { questions } =
 init : Model
 init = 
     { questions =
-        [ { question = "Why did the chicken cross the road?"
-          , correct = "To get to the other side"
-          , incorrect = []
-          }
+        [ Question
+            "Why did the chicken cross the road?"
+            "To get to the other side"
+            []
         ]
     }
 
