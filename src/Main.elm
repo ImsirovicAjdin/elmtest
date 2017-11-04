@@ -55,7 +55,7 @@ dict =
 
 -- we can also insert a value
 transformDict dict =
-    Dict.update "answer" (\a -> a) dict
+    Dict.update "answer" (\a -> (Maybe.map String.toUpper) a) dict
 
 view model =
     text 
