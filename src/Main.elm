@@ -27,13 +27,12 @@ view { questions } =
 
 init : Model
 init = 
-    { questions =
+    Model
         [ Question
             "Why did the chicken cross the road?"
             "To get to the other side"
             []
         ]
-    }
 
 main : Html msg
 main =
