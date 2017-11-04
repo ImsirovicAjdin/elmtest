@@ -2,6 +2,12 @@ module Main exposing (..)
 
 import Html exposing (Html, text)
 
+type Difficulty
+    = Any
+    | Easy
+    | Medium
+    | Hard
+
 type alias Question =
     { question : String
     , correct: String
@@ -29,6 +35,7 @@ view { questions } =
 init : Model
 init = 
     Model
+        Any
         [ Question
             "Why did the chicken cross the road?"
             "To get to the other side"
