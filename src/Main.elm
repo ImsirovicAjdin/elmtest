@@ -3,6 +3,9 @@ module Main exposing (..)
 import Html exposing (Html, text)
 
 
+type alias Model = 
+    {}
+
 view : Model -> Html msg
 view model =
     text 
