@@ -22,7 +22,9 @@ transformSet set =
         |> Set.map toString
         |> Set.toList
         |> String.join ", "
-        
+
+array =
+    Array.empty
 
 view model =
     text 
