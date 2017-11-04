@@ -25,6 +25,10 @@ transformSet set =
 
 array =
     Array.empty
+        |> Array.push 1
+        |> Array.push 2
+        |> Array.push 3
+
 
 view model =
     text 
