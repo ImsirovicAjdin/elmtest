@@ -2,6 +2,11 @@ module Main exposing (..)
 
 import Html exposing (Html, text)
 
+type alias Question =
+    { question : String
+    , correct: String
+    , incorrect : List String
+    }
 
 type alias Model = 
     { questions : List Question
