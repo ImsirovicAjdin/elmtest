@@ -48,12 +48,8 @@ transformArray array =
 
 dict =
     Dict.fromList 
-        [ ( "question" 
-          , "Why did the chicken cross the road?"  
-          )
-        , ( "answer"
-          , "To get to the other side"
-          )
+        [ "question" => "Why did the chicken cross the road?"  
+        , "answer" => "To get to the other side"
         ]
 
 -- we can also insert a value
