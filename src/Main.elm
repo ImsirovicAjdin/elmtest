@@ -41,11 +41,11 @@ view : Model -> Html msg
 view { questions } =
     questions
     |> List.map 
-        (\{question, correct} ->
+        (\{ question, userAnswer } ->
             "Question: "      
                 ++ question   
                 ++ " Answer: "
-                ++ correct
+                ++ (toString userAnswer)
         )
     |> String.join ", "
     |> text
