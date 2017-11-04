@@ -12,7 +12,7 @@ default : Difficulty
 default =
     Any
 
-list : List Difficulty
+list : List ( String, Difficulty)
 list =
     [ ("Any", Any) 
     , ("Easy", Easy)
