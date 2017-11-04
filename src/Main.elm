@@ -8,6 +8,18 @@ type Difficulty
     | Medium
     | Hard
 
+default : Difficulty
+default =
+    Any
+
+list : List Difficulty
+list =
+    [ ("Any", Any) 
+    , ("Easy", Easy)
+    , ("Medium", Medium)
+    , ("Hard", Hard)
+    ]
+
 type alias Question =
     { question : String
     , correct: String
