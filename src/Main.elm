@@ -60,5 +60,5 @@ init =
 main =
     -- view init
     array
-        |> toString
+        |> transformArray
         |> text
