@@ -9,7 +9,8 @@ type alias Question =
     }
 
 type alias Model = 
-    { questions : List Question
+    { difficulty : Difficulty
+    , questions : List Question
     }
 
 view : Model -> Html msg
