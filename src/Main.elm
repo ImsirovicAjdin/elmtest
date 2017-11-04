@@ -29,6 +29,19 @@ array =
         |> Array.push 2
         |> Array.push 3
 
+transformArray array = 
+    -- the only unique property of arrays is that you can 
+    -- read elements by index
+    -- So instead of mapping over an array (which is also
+    -- kind of useful), 
+    -- I'm gonna try retreiving an item, and just casting
+    -- it to a string and outputting it to the browser
+    -- I'll use Array.get to retreive an item:
+    array
+        |> Array.get 1
+        |> toString
+    -- ... and then I've cast it to string
+
 
 view model =
     text 
