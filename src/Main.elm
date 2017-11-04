@@ -1,6 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (Html, text)
+import Maybe
 
 type Difficulty
     = Any
@@ -25,7 +26,8 @@ list =
     ]
 
 type alias Question =
-    { question : String
+    { userAnswer : Maybe String
+    , question : String
     , correct: String
     , incorrect : List String
     }
@@ -53,6 +55,7 @@ init =
     Model
         Any
         [ Question
+            Nothing
             "Why did the chicken cross the road?"
             "To get to the other side"
             []
