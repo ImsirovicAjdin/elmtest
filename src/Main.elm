@@ -4,7 +4,8 @@ import Html exposing (Html, text)
 
 
 type alias Model = 
-    {}
+    { questions : List Question
+    }
 
 view : Model -> Html msg
 view model =
