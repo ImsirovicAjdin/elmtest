@@ -2,6 +2,7 @@ module Main exposing (..)
 
 import Html exposing (text)
 import Set
+import Array
 
 list =
     1 :: [ 2 ] ++ [ 3 ]
@@ -21,6 +22,7 @@ transformSet set =
         |> Set.map toString
         |> Set.toList
         |> String.join ", "
+        
 
 view model =
     text 
