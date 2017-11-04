@@ -23,9 +23,11 @@ view model =
 
 init : Model
 init = 
-    { question = "Why did the chicken cross the road?"
-    , answer = "To get to the other side"
-    }
+    [ { question = "Why did the chicken cross the road?"
+      , answer = "To get to the other side"
+      , incorrect = []
+      }
+    ]
 
 main : Html msg
 main =
