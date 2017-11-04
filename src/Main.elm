@@ -44,7 +44,7 @@ transformArray array =
     -- ... and then I've cast it to string
 
 (=>) =
-    (,)
+    (,) -- this will act as a constructor function for a tuple
 
 dict =
     Dict.fromList 
