@@ -3,6 +3,7 @@ module Main exposing (..)
 import Html exposing (text)
 import Set
 import Array
+import Dict
 
 list =
     1 :: [ 2 ] ++ [ 3 ]
