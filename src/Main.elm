@@ -49,7 +49,10 @@ view { questions } =
             "Question: "      
                 ++ question   
                 ++ " Answer: "
-                ++ (unwrapMaybe userAnswer)
+                ++ (userAnswer
+                    |> Maybe.map String.toUpper
+                    |> unwrapMaybe
+                )
         )
     |> String.join ", "
     |> text
