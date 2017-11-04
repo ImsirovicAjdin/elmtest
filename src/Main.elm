@@ -13,11 +13,14 @@ transformList list =
         |> String.join ", "
 
 set =
-    Set.fromList (list ++ [ 1, 2, 3 ]) -- (1)
+    Set.fromList (list)
 
 transformSet set =
     set 
-        |> toString
+        |> Set.map (\a -> a + 1)
+        |> Set.map toString
+        |> Set.toList
+        |> String.join ", "
 
 view model =
     text 
