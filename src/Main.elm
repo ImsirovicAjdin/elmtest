@@ -12,12 +12,16 @@ default : Difficulty
 default =
     Any
 
+(=>) : a -> b -> (a, b)
+(=>) =
+    (,)
+
 list : List ( String, Difficulty)
 list =
-    [ ("Any", Any) 
-    , ("Easy", Easy)
-    , ("Medium", Medium)
-    , ("Hard", Hard)
+    [ "Any" => Any
+    , "Easy" => Easy
+    , "Medium" => Medium
+    , "Hard" => Hard
     ]
 
 type alias Question =
