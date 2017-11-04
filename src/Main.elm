@@ -21,7 +21,7 @@ view model =
             ++ (model.answer)
         )
 
-
+init : Model
 init = 
     { question = "Why did the chicken cross the road?"
     , answer = "To get to the other side"
