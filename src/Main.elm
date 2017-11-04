@@ -37,6 +37,10 @@ type alias Model =
     , questions : List Question
     }
 
+unwrapMaybe : Maybe String -> String
+unwrapMaybe mb =
+    Maybe.withDefault "There's no answer" mb
+
 view : Model -> Html msg
 view { questions } =
     questions
@@ -45,7 +49,7 @@ view { questions } =
             "Question: "      
                 ++ question   
                 ++ " Answer: "
-                ++ (toString userAnswer)
+                ++ (unwrapMaybe userAnswer)
         )
     |> String.join ", "
     |> text
