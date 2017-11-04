@@ -46,6 +46,6 @@ init =
 
 main =
     -- view init
-    set 
-        |> transformSet
+    array
+        |> toString
         |> text
