@@ -38,7 +38,7 @@ transformArray array =
     -- it to a string and outputting it to the browser
     -- I'll use Array.get to retreive an item:
     array
-        |> Array.get 1
+        |> Array.get 4 -- requesting non-existing index
         |> toString
     -- ... and then I've cast it to string
 
