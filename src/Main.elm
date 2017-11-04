@@ -72,6 +72,7 @@ init =
 
 main =
     -- view init
-    array
-        |> transformArray
+    dict
+        |> transformDict
+        |> toString
         |> text
