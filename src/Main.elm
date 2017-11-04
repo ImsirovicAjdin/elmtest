@@ -13,21 +13,27 @@ type alias Model =
     }
 
 view : Model -> Html msg
-view model =
-    text 
-        ("Question: "
-            ++ (model.question)
-            ++ " Answer: "
-            ++ (model.answer)
+view { questions } =
+    questions
+    |> List.map 
+        (\{question, correct} ->
+            "Question: "      
+                ++ question   
+                ++ " Answer: "
+                ++ correct
         )
+    |> String.join ", "
+    |> text
 
 init : Model
 init = 
-    [ { question = "Why did the chicken cross the road?"
-      , answer = "To get to the other side"
-      , incorrect = []
-      }
-    ]
+    { questions =
+        [ { question = "Why did the chicken cross the road?"
+          , correct = "To get to the other side"
+          , incorrect = []
+          }
+        ]
+    }
 
 main : Html msg
 main =
