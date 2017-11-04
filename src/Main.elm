@@ -43,6 +43,15 @@ transformArray array =
         |> toString
     -- ... and then I've cast it to string
 
+dict =
+    Dict.fromList 
+        [ ( "question" 
+          , "Why did the chicken cross the road?"  
+          )
+        , ( "answer"
+          , "To get to the other side"
+          )
+        ]
 
 view model =
     text 
