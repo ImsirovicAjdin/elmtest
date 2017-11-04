@@ -13,7 +13,7 @@ transformList list =
         |> String.join ", "
 
 set =
-    Set.fromList (list ++ [3]) -- (1)
+    Set.fromList (list ++ [ 1, 2, 3 ]) -- (1)
 
 transformSet set =
     set 
