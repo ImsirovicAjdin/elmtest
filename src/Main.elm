@@ -43,6 +43,9 @@ transformArray array =
         |> toString
     -- ... and then I've cast it to string
 
+(=>) =
+    (,)
+
 dict =
     Dict.fromList 
         [ ( "question" 
