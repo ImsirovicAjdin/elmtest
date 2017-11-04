@@ -70,9 +70,6 @@ init =
     , answer = "To get to the other side"
     }
 
+main : Html msg
 main =
-    -- view init
-    dict
-        |> transformDict
-        |> toString
-        |> text
+    view init
