@@ -53,8 +53,11 @@ dict =
           )
         ]
 
+-- you can get a value from Dict like this:
 transformDict dict =
-    dict
+    Dict.get "answer" dict
+-- we can also ask for a non-existing key, which will be
+-- nothing
 
 view model =
     text 
