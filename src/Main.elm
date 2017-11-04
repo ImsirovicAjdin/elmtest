@@ -53,6 +53,9 @@ dict =
           )
         ]
 
+transformDict dict =
+    dict
+
 view model =
     text 
         ("Question: "
