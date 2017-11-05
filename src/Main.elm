@@ -3,30 +3,7 @@ module Main exposing (..)
 import Html exposing (Html, text)
 import Maybe
 import Util exposing (..)
-
-type Difficulty
-    = Any
-    | Easy
-    | Medium
-    | Hard
-
-default : Difficulty
-default =
-    Any
-
-{--
-(=>) : a -> b -> (a, b)
-(=>) =
-    (,)
---}
-
-list : List ( String, Difficulty)
-list =
-    [ "Any" => Any
-    , "Easy" => Easy
-    , "Medium" => Medium
-    , "Hard" => Hard
-    ]
+import Data.Difficulty exposing (Difficulty, default)
 
 type alias Question =
     { userAnswer : Maybe String
@@ -79,7 +56,7 @@ view { questions } =
 init : Model
 init = 
     Model
-        Any
+        default
         [ Question
             (Just "TO get to the other side") -- Nothing
             "Why did the chicken cross the road?"
