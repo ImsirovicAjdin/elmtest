@@ -4,13 +4,7 @@ import Html exposing (Html, text)
 import Maybe
 import Util exposing (..)
 import Data.Difficulty exposing (Difficulty, default)
-
-type alias Question =
-    { userAnswer : Maybe String
-    , question : String
-    , correct: String
-    , incorrect : List String
-    }
+import Data.Question exposing (Question)
 
 type alias Model = 
     { difficulty : Difficulty
