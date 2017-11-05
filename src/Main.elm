@@ -1,6 +1,6 @@
 module Main exposing (..)
 
-import Html exposing (Html, text)
+import Html exposing (Html, text, div)
 import Maybe
 import Util exposing ((=>))
 import Data.Difficulty exposing (Difficulty)
@@ -26,7 +26,4 @@ init =
 
 main : Html msg
 main =
-    init.questions
-        |> List.map View.Question.view
-        |> String.join ", "
-        |> text
+    div [] [ text (toString init.difficulty )]
