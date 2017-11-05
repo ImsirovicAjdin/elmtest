@@ -11,6 +11,10 @@ view { question, correct, incorrect } =
             List.sort (correct :: incorrect)
     in 
         div [] 
-            ( answers
-                |> List.map text
-            )
+            [ text question
+            , div []
+                (answers
+                    |> List.map text
+                    |> List.intersperse (text " ")   
+                )
+            ]
