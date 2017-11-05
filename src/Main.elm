@@ -89,5 +89,6 @@ main =
     -- view init
     parsedInt
         |> Result.toMaybe
-        |> toString
+        |> Maybe.map toString
+        |> unwrapMaybe
         |> text
