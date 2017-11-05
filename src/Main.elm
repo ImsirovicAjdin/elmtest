@@ -49,7 +49,11 @@ parsedInt =
 
 unwrapResult : Result String Int -> Int
 unwrapResult res =
-    Result.withDefault 5 res
+    case res of
+        Ok val -> 
+            val
+        Err err ->
+            5
 
 
 view : Model -> Html msg
