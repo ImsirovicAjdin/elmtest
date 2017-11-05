@@ -44,7 +44,7 @@ unwrapMaybe mb =
 
 parsedInt : Result String Int 
 parsedInt =
-    String.toInt "5as"
+    String.toInt "5"
 
 
 unwrapResult : Result String Int -> Int
