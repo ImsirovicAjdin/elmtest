@@ -5,6 +5,7 @@ import Maybe
 import Util exposing (..)
 import Data.Difficulty exposing (Difficulty, default)
 import Data.Question exposing (Question)
+import View.Question
 
 type alias Model = 
     { difficulty : Difficulty
@@ -30,22 +31,7 @@ unwrapResult res =
             5
 
 
-view : Model -> Html msg
-view { questions } =
-    questions
-    |> List.map 
-        (\{ question, userAnswer } ->
-            "Question: "      
-                ++ question   
-                ++ " Answer: "
-                ++ (userAnswer
-                    |> Maybe.map String.toUpper
-                    |> Maybe.map String.reverse
-                    |> unwrapMaybe
-                )
-        )
-    |> String.join ", "
-    |> text
+
 
 init : Model
 init = 
