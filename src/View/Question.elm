@@ -1,11 +1,16 @@
 module View.Question exposing (view)
 
+import Html exposing (Html, div, text)
 import Data.Question exposing (Question)
 
 
-view : Question -> String
-view { question, correct } =
-    "Question: "
-        ++ question
-        ++ " Answer: "
-        ++ correct
+view : Question -> Html msg
+view { question, correct, incorrect } =
+    let 
+        answers =
+            List.sort (correct :: incorrect)
+    in 
+        div [] 
+            ( answers
+                |> List.map text
+            )
