@@ -1,4 +1,4 @@
-module Data.Difficulty exposing (Difficulty, default)
+module Data.Difficulty exposing (..)
 
 import Util exposing ((=>))
 
