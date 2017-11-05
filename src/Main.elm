@@ -26,4 +26,5 @@ init =
 
 main : Html msg
 main =
-    div [] [ text (toString init.difficulty )]
+    div [] 
+        (List.map View.Question.view init.questions)
