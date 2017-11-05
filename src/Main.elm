@@ -2,6 +2,7 @@ module Main exposing (..)
 
 import Html exposing (Html, text)
 import Maybe
+import Util
 
 type Difficulty
     = Any
