@@ -2,7 +2,7 @@ module View.Question exposing (view)
 
 import Html exposing (Html, div, text)
 import Data.Question exposing (Question)
-
+import View.Button
 
 view : Question -> Html msg
 view { question, correct, incorrect } =
@@ -14,7 +14,7 @@ view { question, correct, incorrect } =
             [ text question
             , div []
                 (answers
-                    |> List.map text
+                    |> List.map View.Button.btn
                     |> List.intersperse (text " ")   
                 )
             ]
