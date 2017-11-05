@@ -41,7 +41,7 @@ unwrapMaybe : Maybe String -> String
 unwrapMaybe mb =
     Maybe.withDefault "There's no answer" mb
 
-
+ 
 parsedInt : Result String Int 
 parsedInt =
     String.toInt "5"
