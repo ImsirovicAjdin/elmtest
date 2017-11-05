@@ -51,6 +51,7 @@ view { questions } =
                 ++ " Answer: "
                 ++ (userAnswer
                     |> Maybe.map String.toUpper
+                    |> Maybe.map String.reverse
                     |> unwrapMaybe
                 )
         )
