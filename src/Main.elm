@@ -88,6 +88,6 @@ main : Html msg
 main =
     -- view init
     parsedInt
-        |> unwrapResult
+        |> Result.toMaybe
         |> toString
         |> text
