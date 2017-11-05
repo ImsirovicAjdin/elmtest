@@ -3,7 +3,7 @@ module Main exposing (..)
 import Html exposing (Html, text)
 import Maybe
 import Util exposing ((=>))
-import Data.Difficulty exposing (Difficulty, default)
+import Data.Difficulty exposing (Difficulty)
 import Data.Question exposing (Question)
 import View.Question
 
@@ -16,12 +16,12 @@ type alias Model =
 init : Model
 init = 
     Model
-        default
+        Data.Difficulty.default
         [ Question
-            (Just "TO get to the other side")
-            "Why did the chicken cross the road?"
-            "To get to the other side"
-            []
+            Nothing
+            "A caterpillar has more muscles than humans do."
+            "True"
+            [ "False" ]
         ]
 
 main : Html msg
