@@ -44,7 +44,7 @@ unwrapMaybe mb =
 
 parsedInt : Result String Int 
 parsedInt =
-    String.toInt "5"
+    String.toInt "5as"
 
 
 view : Model -> Html msg
@@ -77,4 +77,7 @@ init =
 
 main : Html msg
 main =
-    view init
+    -- view init
+    parsedInt
+        |> toString
+        |> text
