@@ -47,6 +47,11 @@ parsedInt =
     String.toInt "5as"
 
 
+unwrapResult : Result String Int -> Int
+unwrapResult res =
+    Result.withDefault 5 res
+
+
 view : Model -> Html msg
 view { questions } =
     questions
@@ -79,5 +84,6 @@ main : Html msg
 main =
     -- view init
     parsedInt
+        |> unwrapResult
         |> toString
         |> text
