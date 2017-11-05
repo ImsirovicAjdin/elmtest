@@ -2,7 +2,7 @@ module Main exposing (..)
 
 import Html exposing (Html, text)
 import Maybe
-import Util
+import Util exposing (..)
 
 type Difficulty
     = Any
@@ -14,9 +14,11 @@ default : Difficulty
 default =
     Any
 
+{--
 (=>) : a -> b -> (a, b)
 (=>) =
     (,)
+--}
 
 list : List ( String, Difficulty)
 list =

@@ -1,4 +1,4 @@
-module Util exposing (..)
+module Util exposing ((=>))
 
 
 (=>) : a -> b -> ( a, b )
